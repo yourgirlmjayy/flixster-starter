@@ -26,3 +26,16 @@
     flex-direction: column;
   }
 }
+
+.App-footer{
+    background-color: #282c34;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    align-items: center;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    bottom: 0; 
+    position: relative;
+
+}
