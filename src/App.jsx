@@ -8,7 +8,7 @@ const App = () => {
   const [movies, setMovies] = useState([])
   const [page, setPage] = useState(1)
   const [searchInput, setSearchInput] = useState('')
-  const [filteredMovies, setFilteredMovies] = useState([]);
+  // const [filteredMovies, setFilteredMovies] = useState([]);
   const [selectedSort, setSelectedSort] = useState('popularity_desc')
 
 
@@ -59,7 +59,7 @@ const App = () => {
           return title.includes(search)
         })
         setMovies(filteredMovies)
-        setFilteredMovies(filteredMovies)
+        return;
       }
 
     const options = {
@@ -72,7 +72,7 @@ const App = () => {
 
     const res = await fetch(url, options);
     const data = await res.json();
-    setMovies(data.results);
+    setMovies((prevMovies) => page === 1 ? data.results : [...prevMovies, ...data.rersults]);
 
     // setMovies((oldData) => [...oldData, ...data.results]);
       // .then(response => response.json())
@@ -114,7 +114,6 @@ const App = () => {
   const handleLoadMore = () => {
     // increment page number when load more is clicked
     setPage(page + 1)
-    getMovies();
   }
 
   return(
@@ -129,7 +128,7 @@ const App = () => {
           <h1>🎬 Flixter</h1>
         </header>
 
-        <select name="sort-by" value={selectedSort} onClick={handleSortChange} selectedSort={selectedSort} setSelectedSort={setSelectedSort}>
+        <select name="sort-by" value={selectedSort} onChange={handleSortChange}>
           <option value="popularity.desc">Sort By Popularity</option>
           <option value="release_date.desc">Sort By Release Date</option>
         </select>
