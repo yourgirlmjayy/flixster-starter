@@ -9,8 +9,12 @@ const App = () => {
   const [page, setPage] = useState(1)
   const [searchInput, setSearchInput] = useState('')
   const [filteredMovies, setFilteredMovies] = useState([]);
+  const [selectedSort, setSelectedSort] = useState('popularity_desc')
 
 
+  const handleSortChange = (event) => {
+    setSelectedSort(event.target.value)
+  };
 
   // now playing with load more button
 
@@ -21,9 +25,16 @@ const App = () => {
   // conditions:
   // if page is value 1
     // populate data for the first time (initial page load)
+    // let url;
+  //   if (page === 1){
+  //     url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=${page}`}
 
-  // if page is >1
-    // load more button clicked -> add more movies to list
+
+  // // if page is >1
+  //   // load more button clicked -> add more movies to list
+  //   if(page > 1){
+  //     data => setMovies([...movies, ...data.results])
+  //   }
 
 
 
@@ -117,9 +128,15 @@ const App = () => {
         <header className='App-header'>
           <h1>🎬 Flixter</h1>
         </header>
+
+        <select name="sort-by" value={selectedSort} onClick={handleSortChange} selectedSort={selectedSort} setSelectedSort={setSelectedSort}>
+          <option value="popularity.desc">Sort By Popularity</option>
+          <option value="release_date.desc">Sort By Release Date</option>
+        </select>
         
         <main> {/*display movie list*/}
-          <MovieList movies={movies}/>
+          <MovieList movies={movies} 
+          selectedSort={selectedSort}/>
           <button className='Load-more-button' onClick ={handleLoadMore}>Load More</button>
         </main>
 

@@ -17,7 +17,7 @@ function MovieCard(props){
             <div className='movie-image-container'><img src = {'https://image.tmdb.org/t/p/w500' + props.movieImage} className= 'movie-image' alt="movie image"/></div>
             <div className='movie-details'><h4>{props.movieTitle}</h4>
             <p>{'☆ Rating: ' + props.movieRating}</p>
-            <p>{"Release date: " + props.movieReleaseDate}</p>
+            {/* <p>{"Release date: " + props.movieReleaseDate}</p> */}
             <button onClick={handleModalOpen}>More details</button>
             </div>
             {showModal && (
