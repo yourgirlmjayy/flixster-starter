@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-header {
@@ -18,18 +19,20 @@
   }
 
   .search-bar {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     gap: 10px;
   }
 
   .search-bar form {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
   }
 }
 .navBar{
   position: fixed;
   height: 100%;
-  background-color: grey;
+  background-color: #282c34;
   padding: 5%;
   width: 20%;
 }

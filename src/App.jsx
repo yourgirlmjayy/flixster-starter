@@ -11,6 +11,28 @@ const App = () => {
   const [filteredMovies, setFilteredMovies] = useState([]);
 
 
+
+  // now playing with load more button
+
+  // fetch data from API
+  // turn into json
+  // update state
+
+  // conditions:
+  // if page is value 1
+    // populate data for the first time (initial page load)
+
+  // if page is >1
+    // load more button clicked -> add more movies to list
+
+
+
+
+
+  // search term results
+
+
+
   const API_KEY = import.meta.env.VITE_API_KEY;
 
   console.log("searchInput", searchInput)
