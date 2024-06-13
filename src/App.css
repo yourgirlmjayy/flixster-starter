@@ -26,6 +26,17 @@
     flex-direction: column;
   }
 }
+.navBar{
+  position: fixed;
+  height: 100%;
+  background-color: grey;
+  padding: 5%;
+  width: 20%;
+}
+
+.movieInfo {
+  margin-left: 30%;
+}
 
 .App-footer{
     background-color: #282c34;

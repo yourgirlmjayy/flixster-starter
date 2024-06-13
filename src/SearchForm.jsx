@@ -3,23 +3,23 @@ import './SearchForm.css'
 
 const SearchForm = (props) =>{
     //useState to change user text
-    // const [searchInput, setSearchInput] = useState('')
+    const [searchTerm, setSearchTerm] = useState('')
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault()
-    //     setSearchText(searchInput)
-    //     handleSearch(searchInput)
-    //     console.log(`searching for ${searchInput}`)
-    // }
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        console.log("searching")
+        props.setSearchInput(searchTerm)
+        
+    }
 
-    const handleInputChange = (event) =>{
-        props.setSearchInput(event.target.value);
+    const handleInputChange = (e) =>{
+        setSearchTerm(e.target.value)
     }
 
     return(
         <div className='AppSearchBox'>
-            <form>
-                <input type="search" value={props.searchInput} onChange={handleInputChange} placeholder='Search a movie...'></input>
+            <form onSubmit={handleSubmit}>
+                <input type="search" value={searchTerm} onChange={handleInputChange} placeholder='Search a movie...'></input>
                 <button type ="submit">Search</button>
             </form>
         </div>

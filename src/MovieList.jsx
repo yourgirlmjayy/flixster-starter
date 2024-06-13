@@ -9,11 +9,12 @@ const MovieList = (props) => {
       <div className="movie-list">
        {props.movies.map((movie) => (
          <MovieCard
-            key = {movie.id}
+            movieId = {movie.id}
             movieImage = {movie.poster_path}
             movieTitle = {movie.title}
             movieRating={movie.vote_average}
             movieReleaseDate={movie.release_date}
+            movie = {movie}
         />
       ))}
      </div>
