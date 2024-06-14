@@ -13,6 +13,9 @@ const MovieModal = ({ movie, showModal, onClose }) => {
           <p><b>Overview: </b>{movie.overview}</p>
           <p><b> Release date: </b>{movie.release_date}</p>
         </div>
+        <>
+        {/* Youtube Video */}
+        </>
         <button onClick={onClose}>Close</button>
       </div>
     </div>

@@ -7,6 +7,7 @@ function MovieCard(props){
 
     const handleModalOpen = () => {
       setShowModal(true);
+    //   props.onMovieClick(); Fiyin
     };
   
     const handleModalClose = () => {
@@ -14,12 +15,14 @@ function MovieCard(props){
     };
     return (
         <div className='movie-card' key={props.movieId}>
-            <div className='movie-image-container'>
+            <div style={{position: 'relative'}}>
+                <div className ='card-icon' ><div className='movie-image-container'>
                 <img src = {'https://image.tmdb.org/t/p/w500' + props.movieImage} className= 'movie-image' alt="movie image"/></div>
             <div className='movie-details'><h4>{props.movieTitle}</h4>
-            <p>{'☆ Rating: ' + props.movieRating}</p>
+            <p className='rating-id'>{'☆ Rating: ' + props.movieRating}</p>
             {/* <p>{"Release date: " + props.movieReleaseDate}</p> */}
-            <button onClick={handleModalOpen}>More details</button>
+            <button className='more-details-button' onClick={handleModalOpen}>More details</button>
+            </div></div>
             </div>
             {showModal && (
         <MovieModal

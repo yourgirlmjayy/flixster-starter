@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import MovieCard from './MovieCard';
 import './MovieList.css'
 
-const MovieList = ({props, movies, selectedSort}) => {
+const MovieList = ({movies, selectedSort}) => {
   const [sortedMovies, setSortedMovies] = useState([]);
 
   useEffect(() => {

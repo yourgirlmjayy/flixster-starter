@@ -1,21 +1,69 @@
 .movie-card{
     /* padding: 15px; */
     /* width: 400px; */
-    border: 3px solid black;
+    border: 3px solid rgb(36, 31, 31);
     border-radius: 7px 9px 20px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 180px;
     margin: 10px;
     color: white;
-    background-color: black;
+    background-color: rgb(124, 171, 124);
 }
 
 .movie-card:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* transform: scale(1.1); */
-    transition: all 0.3s ease-in-out;
+    transform: translate(-10px, -10px) scale(1.05);
+    /* transition: ; */
+    cursor: pointer;
+    background-color: lightgreen;
+    /* color: green; */
+}
+
+.movie-card::before,
+.movie-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: transform 0.3 ease, opacity 0.3 ease, opacity 0.3 ease;
+    z-index: -1;
+}
+
+.movie-card::before {
+    transform: translate(5px, 5px) scale(0.95);
+    opacity: 0;
+}
+
+.movie-card::after {
+    transform: translate(10px, 10px) scale(0.9);
+    opacity: 0;
+}
+
+.movie-card:hover::before {
+    transform: translate(0, 0) scale(1);
+    opacity: 0;
+}
+
+.movie-card:hover::after {
+    transform: translate(-5px, -5px) scale(1);
+    opacity: 0.1;
 }
 
 .movie-image{
     width: 179.5px;
+}
+
+.rating-id{
+    margin: 3px;
+    padding: 1px;
+}
+
+.more-details-button{
+    top: 0;
+    margin-bottom: 5px;
+    background-color: rgb(21, 162, 21);
+    border: rgb(35, 126, 35);
 }

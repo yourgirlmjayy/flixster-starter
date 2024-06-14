@@ -1,49 +1,55 @@
-.App {
-  text-align: center;
-  background-color: #282c34;
+@font-face {
+  font-family: header-font;
+  src: url('./Walt Melody.otf');
 }
 
+.App {
+  text-align: center;
+  background-color: black;
+}
+
+.App-header h1{
+  font-family: header-font;
+  font-size: 50px;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(124, 171, 124);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  padding: 20px;
+  padding: 10px;
 }
 
 @media (max-width: 600px) {
   .movie-card {
     width: 100%;
   }
-
-  .search-bar {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .search-bar form {
-    display: flex;
-    flex-direction: row;
-  }
-}
-.navBar{
-  position: fixed;
-  height: 100%;
-  background-color: #282c34;
-  padding: 5%;
-  width: 20%;
 }
 
-.movieInfo {
-  margin-left: 30%;
+.user-options-form{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1px; /* added */
+  gap: 30px;
+}
+
+.search-form-box {
+  display: flex;
+  margin-right: 20px; /* added */
+}
+.sort-box{
+  display: flex;
+  margin-right: 10px;
 }
 
 .App-footer{
-    background-color: #282c34;
-    color: #fff;
+    background-color: rgb(124, 171, 124);
+    color: white;
     padding: 10px 20px;
     text-align: center;
     align-items: center;
