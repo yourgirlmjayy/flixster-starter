@@ -1,72 +1,52 @@
-import React, { useState } from 'react';
-import './MovieCard.css';
-import MovieModal from './MovieModal';
+import React, { useState } from "react";
+import "./MovieCard.css";
+import MovieModal from "./MovieModal";
 
-function MovieCard(props){
-    const [showModal, setShowModal] = useState(false);
+function MovieCard(props) {
+  const [showModal, setShowModal] = useState(false);
 
-    const handleModalOpen = () => {
-      setShowModal(true);
+  const handleModalOpen = () => {
+    setShowModal(true);
     //   props.onMovieClick(); Fiyin
-    };
-  
-    const handleModalClose = () => {
-      setShowModal(false);
-    };
-    return (
-        <div className='movie-card' key={props.movieId}>
-            <div style={{position: 'relative'}}>
-                <div className ='card-icon' ><div className='movie-image-container'>
-                <img src = {'https://image.tmdb.org/t/p/w500' + props.movieImage} className= 'movie-image' alt="movie image"/></div>
-            <div className='movie-details'><h4>{props.movieTitle}</h4>
-            <p className='rating-id'>{'☆ Rating: ' + props.movieRating}</p>
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
+  return (
+    <>
+    <div className="movie-card" key={props.movieId}>
+      <div style={{ position: "relative" }}>
+        <div className="card-icon">
+          <div className="movie-image-container">
+            <img
+              src={"https://image.tmdb.org/t/p/w500" + props.movieImage}
+              className="movie-image"
+              alt="movie image"
+            />
+          </div>
+          <div className="movie-details">
+            <h4>{props.movieTitle}</h4>
+            <p className="rating-id">{"☆ Rating: " + props.movieRating}</p>
             {/* <p>{"Release date: " + props.movieReleaseDate}</p> */}
-            <button className='more-details-button' onClick={handleModalOpen}>More details</button>
-            </div></div>
-            </div>
-            {showModal && (
+            <button className="more-details-button" onClick={handleModalOpen}>
+              More details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {showModal && (
         <MovieModal
           movie={props.movie}
           showModal={showModal}
           onClose={handleModalClose}
         />
       )}
-        </div>
-    )
+    </>
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // MovieCard.propTypes={
 //     movieTitle: PropTypes.string.isRequired,

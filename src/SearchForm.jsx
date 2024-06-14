@@ -1,4 +1,5 @@
 import {useState} from 'react';
+// import {g}
 import './SearchForm.css'
 
 const SearchForm = (props) =>{
@@ -18,9 +19,9 @@ const SearchForm = (props) =>{
 
     return(
         <div className='AppSearchBox'>
-            <form onSubmit={handleSubmit}>
+            <form className='search-box-form' onSubmit={handleSubmit}>
                 <input type="search" value={searchTerm} onChange={handleInputChange} placeholder='Search a movie...'></input>
-                <button type ="submit">Search</button>
+                <button type ="submit">🔎</button>
             </form>
         </div>
     )

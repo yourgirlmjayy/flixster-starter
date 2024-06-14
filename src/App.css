@@ -1,19 +1,25 @@
 @font-face {
   font-family: header-font;
-  src: url('./Walt Melody.otf');
+  src: url("./Walt Melody.otf");
 }
-
+@font-face {
+  font-family: body-font;
+  src: url("./SpecialElite.ttf");
+}
 .App {
   text-align: center;
   background-color: black;
 }
 
-.App-header h1{
+.app-name{
   font-family: header-font;
+  background-color: rgb(124, 171, 124);
+  color: white;
   font-size: 50px;
+  margin: 0;
 }
 .App-header {
-  background-color: rgb(124, 171, 124);
+  background-color: rgb(145, 188, 158);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -29,33 +35,36 @@
   }
 }
 
-.user-options-form{
-  display:flex;
+.user-options-form {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-family: body-font;
   margin-top: 1px; /* added */
   gap: 30px;
 }
 
 .search-form-box {
   display: flex;
+  font-family: body-font;
   margin-right: 20px; /* added */
 }
-.sort-box{
+.sort-box {
   display: flex;
+  font-family: body-font;
   margin-right: 10px;
 }
 
-.App-footer{
-    background-color: rgb(124, 171, 124);
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    align-items: center;
-    border-top: 1px solid #444;
-    margin-top: 20px;
-    bottom: 0; 
-    position: relative;
-
+.App-footer {
+  background-color: rgb(124, 171, 124);
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  align-items: center;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  bottom: 0;
+  position: relative;
+  font-family: body-font;
 }

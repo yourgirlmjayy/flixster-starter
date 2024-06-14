@@ -1,8 +1,8 @@
-.movie-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px;
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px;
 }
 
 /* .movie-list:hover{

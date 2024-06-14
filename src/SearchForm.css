@@ -1,0 +1,10 @@
+@font-face {
+    font-family: text-font;
+    src: url(SpecialElite.ttf);
+}
+.search-box-form{
+    font-family: text-font;
+}
+.AppSearchBox{
+    font-family: text-font;
+}
