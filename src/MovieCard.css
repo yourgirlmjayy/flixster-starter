@@ -21,7 +21,7 @@
   transform: scale(1.05);
   /* transition: ; */
   cursor: pointer;
-  background-color: lightgreen;
+  background-color: rgb(124, 171, 124);
   color: black;
   /* color: green; */
 }
