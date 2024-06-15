@@ -11,6 +11,7 @@ const MovieModal = ({ movie, showModal, onClose }) => {
           <img src={'https://image.tmdb.org/t/p/w1280' + movie.poster_path} alt="Backdrop poster" />
           {/* <p>Genres: {movie.genres.join(', ')}</p> */}
           <p><b>Overview: </b>{movie.overview}</p>
+          <p><b>☆Rating: </b>{movie.vote_average}</p>
           <p><b> Release date: </b>{movie.release_date}</p>
         </div>
         <>

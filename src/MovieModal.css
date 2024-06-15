@@ -1,5 +1,10 @@
 /* CSS for Modal */
-.modal {
+@font-face {
+   font-family: body-font;
+   src: url('./SpecialElite.ttf');
+ }
+ 
+ .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -8,18 +13,22 @@
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
+    font-family: body-font;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     backdrop-filter: blur(5px);
  }
+
  .modal-content {
-    background-color: rgb(124, 171, 124);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 10px;
-    animation: modalFadeIn 0.3s ease-in-out forwards;
-    width: 80%; /* Could be more or less, depending on screen size */
+   background-color: rgb(124, 171, 124);
+   margin: 15% auto; 
+   padding: 20px;
+   border: 1px solid #888;
+   border-radius: 10px;
+   font-family: body-font;
+   animation: modalFadeIn 0.3s ease-in-out forwards;
+   width: 80%;
  }
+
  @keyframes modalFadeIn {
    0% {
       opacity: 0;
@@ -30,21 +39,18 @@
       transform: scale(1);
    }
  }
- .modal-card{
-    color: black
- }
  .modal-card img{
     width: 250px;
  }
  .close {
-    color: #aaa;
+    color: red;
     float: right;
     font-size: 28px;
     font-weight: bold;
  }
  .close:hover,
  .close:focus {
-    color: black;
+    color: red;
     text-decoration: none;
     cursor: pointer;
  }

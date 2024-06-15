@@ -8,7 +8,6 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [searchInput, setSearchInput] = useState("");
-  // const [filteredMovies, setFilteredMovies] = useState([]);
   const [selectedSort, setSelectedSort] = useState("popularity_desc");
 
   const handleSortChange = (event) => {
@@ -116,19 +115,3 @@ const App = () => {
 
 export default App;
 
-//Tried to implement a getMovieDetails Fetch function
-// const getMovieDetails = async(movie_id) => {
-//   let url = `https://api.themoviedb.org/3/movie/${movie_id}?language=en-US&api_key=${API_KEY}`
-
-//   const options = {
-//     method: 'GET',
-//     headers: {
-//       accept: 'application/json',
-//       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0Y2NkNWViYjMzNzBlYjc4MzQxNWViZTYxMjFhOGYxNyIsInN1YiI6IjY2Njc4NTU3M2RlNTFiZmE0YzFjMmU2ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.NBzva_Lu1kD0S-TVYFRe2TpeBbFuJnblRAPNLZUbbfE'
-//     }
-//   };
-
-//   const res = await fetch(url, options);
-//   const data = await res.json();
-//   setMovies((prevMovies) => page === 1 ? data.results : [...prevMovies, ...data.results]);
-// }

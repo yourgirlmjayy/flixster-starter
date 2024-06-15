@@ -1,18 +1,33 @@
 import React, { useState } from "react";
 import "./MovieCard.css";
 import MovieModal from "./MovieModal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faHeart as regularHeart} from "@fortawesome/free-regular-svg-icons";
+import {faHeart as solidHeart} from "@fortawesome/free-solid-svg-icons";
 
 function MovieCard(props) {
   const [showModal, setShowModal] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+  const [isWatched, setIsWatched] = useState(false);
 
   const handleModalOpen = () => {
     setShowModal(true);
-    //   props.onMovieClick(); Fiyin
   };
 
   const handleModalClose = () => {
     setShowModal(false);
   };
+
+  function handleLike(event){
+    event.stopPropagation;
+    setIsLiked(!isLiked);
+  }
+
+  function handleWatched(event){
+    event.stopPropagation;
+    setIsWatched(!isWatched);
+  }
+
   return (
     <>
     <div className="movie-card" key={props.movieId}>
@@ -28,6 +43,13 @@ function MovieCard(props) {
           <div className="movie-details">
             <h4>{props.movieTitle}</h4>
             <p className="rating-id">{"☆ Rating: " + props.movieRating}</p>
+            <div className="liked-and-watched-button"> 
+              {/* <p onClick={handleLike}>{isLiked? <FontAwesomeIcon icon={regularHeart}/> : <FontAwesomeIcon icon={solidHeart}/> }</> */}
+              <div onClick={handleLike}>{isLiked? <FontAwesomeIcon icon={solidHeart}/> : <FontAwesomeIcon icon={regularHeart}/>}</div>
+              
+              {/* / User can click eye button to indicate they have watched a movie / */}
+              <div onClick={handleWatched}>{isWatched? '🍿': '👁️'}</div>
+            </div>
             {/* <p>{"Release date: " + props.movieReleaseDate}</p> */}
             <button className="more-details-button" onClick={handleModalOpen}>
               More details
@@ -47,11 +69,5 @@ function MovieCard(props) {
     </>
   );
 }
-
-// MovieCard.propTypes={
-//     movieTitle: PropTypes.string.isRequired,
-//     movieImage: PropTypes.string.isRequired,
-//     movieRating: PropTypes.string.isRequired,
-// }
 
 export default MovieCard;

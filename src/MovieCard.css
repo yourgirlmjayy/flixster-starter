@@ -3,7 +3,7 @@
   src: url("./SpecialElite.ttf");
 }
 
-.movie-card {
+.movie-card{
   font-family: body-font;
   /* border: 3px solid rgb(36, 31, 31); */
   /* border-radius: 7px 9px 20px 20px;
@@ -77,4 +77,9 @@
   border-radius: 5px;
   padding: 3px;
   padding-top: 5px;
+}
+
+.liked-and-watched-button {
+    display: flex;
+    justify-content: space-evenly;
 }
