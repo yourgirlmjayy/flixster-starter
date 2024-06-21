@@ -12,7 +12,7 @@ Currently, two official plugins are available:
 
 Submitted by: **MOJOLAJESU MERCY**
 
-Estimated time spent: **about 70 hours, I'm not sure but I definitely took breaks in between these** hours spent in total
+Estimated time spent: **about 35 hours, I'm not sure but I definitely took breaks in between these** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site]
 
